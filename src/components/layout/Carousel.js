@@ -64,7 +64,20 @@ export const Sliders = () => {
             </div>
           </Carousel>
         </Col>
-        <Col span={18} pull={6}></Col>
+        <Col span={18} pull={6}>
+          <div className="site-card-border-less-wrapper">
+            <Card
+              title="Womens Clothing"
+              bordered={false}
+              // style={{ width: 100 %; }}
+              id="Card"
+            >
+              <h1>Casual Wear</h1>
+              <h1>AND</h1>
+              <h1>Classic Wear</h1>
+            </Card>
+          </div>
+        </Col>
       </Row>
     </div>
   );
