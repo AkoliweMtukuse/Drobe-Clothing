@@ -1,0 +1,35 @@
+#Search {
+  margin-left: 45%;
+  justify-content: right !important;
+}
+#Navbar {
+  background-color: #4d5656;
+  color: white;
+  font-size: auto;
+}
+#NavDropdown1 {
+  background-color: #4d5656;
+  color: white;
+  font-size: auto;
+}
+#NavDropdown2 {
+  background-color: white;
+  color: #4d5656;
+  font-size: auto;
+}
+
+#NavOptions {
+  justify-content: right !important;
+}
+header {
+  background-color: #4d5656;
+  color: white;
+  display: flex;
+  justify-content: center;
+  box-sizing: 10px;
+  text-align: center;
+}
+img {
+  width: 10%;
+  height: 0%;
+}
