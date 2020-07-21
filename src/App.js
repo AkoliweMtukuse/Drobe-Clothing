@@ -1,15 +1,16 @@
 import React from "react";
-import "./App.css";
-import "antd/dist/antd.css";
-import Nav from "./components/layout/Navbar";
-import { Sliders } from "./components/layout/Carousel";
-import Footer from "./components/layout/Footer";
+import "./App.scss";
+// import Navbar from "./components/layout/Navbar";
+// import Contact from "./components/pages/Contact";
+// import Shop from "./components/pages/Shop";
+import Home from "./components/pages/Home";
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <Sliders />
-      <Footer />
+      {/* <Navbar /> */}
+      {/* <Contact /> */}
+      {/* <Shop /> */}
+      <Home />
     </div>
   );
 }
