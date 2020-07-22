@@ -1,5 +1,6 @@
 import React from "react";
 import "../pages/Shop.scss";
+// import Jordan from "./t-shirt-grey-jordan.png";
 
 export const Shop = () => {
   return (
@@ -212,7 +213,7 @@ export const Shop = () => {
               <div class="badge">Drobe</div>
               <div class="product-tumb">
                 <img
-                  src="https://png2.cleanpng.com/sh/a2b51f42481bb24023418706fa1a1f69/L0KzQYm3WMI0N5lqjZH0aYP2gLBuTfxwdpgyi95uZYbodH77TgNpcaN5Rdp4b3TsdX76kP91fJZpRdN8YYCwgrFqiCkucZ8yjt54bnWwg7nwkwQubJpog9tucz3zcbB7k702amhrS6gCNES2Q4S7Vr41P2I1TqsAN0G4Q4a3VsM3Pmk3T6c8LoDxd1==/kisspng-long-sleeved-t-shirt-hoodie-spotted-asap-rocky-in-vlone-shirt-dickies-pants-5b7f3674433346.4710695715350636682753.png"
+                  src="https://png2.cleanpng.com/sh/440670fa62862568249e24af1a59dfe3/L0KzQYm3VMI1N5JufZH0aYP2gLBuTfFlcZVmi59EZXX9iX7ohPllaaQyhARyZ3nxcb36TgNpd5Yyi9DuYXvogsS0gvxia5wyedDtLYfrecXsTgN1epp1fZ8AYXTpcrPtgvVjPpNoSpCEM0e0SIG6UcE2OmU7SaQ5OUG8RoW6TwBvbz==/kisspng-adidas-yeezy-adidas-originals-shoe-sneakers-black-and-white-stripe-5adfbbfbeb6bc2.9371803115246120919643.png"
                   alt=""
                 />
               </div>
