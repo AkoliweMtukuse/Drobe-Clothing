@@ -1,8 +1,86 @@
-import React from "react";
+import React, { Component } from "react";
 import "../pages/Shop.scss";
-// import Jordan from "./t-shirt-grey-jordan.png";
 
 export const Shop = () => {
+  const prouductDetails = [
+    {
+      id: 1,
+      title: "Nike T-Shirt",
+      img:
+        "https://png2.cleanpng.com/sh/8ff311f9b28687ae2185efcffc8511e7/L0KzQYm3VMExN5Nuj5H0aYP2gLBuTgQue5luiuY2Y3zyhLnwjvcua6Nqj593ZXPuPb7olPNpbaRreeVxaXBxPbT2jb11NaRtgeR9cz24cbTqhcU0aZNne6dvOD63Qoq5WMQ5PGI6SqU8N0e3RoeAVskyNqFzf3==/kisspng-t-shirt-clothing-crew-neck-matchesfashion-com-t-shirts-5acce53abbc5f8.4292848415233774667691.png",
+      category: "Men",
+      cost: "R359",
+      save: "R100",
+    },
+    {
+      id: 2,
+      title: "Nike Goldylocks T-Shirt",
+      img:
+        "https://png2.cleanpng.com/sh/95f6982d5e4ce2ee5bec674e7466853e/L0KzQYm3VME6N6R1j5H0aYP2gLBuTgQue5luiuY2bnnudX7qjP91cJpzf598bHXohra0gBF0fZ0yjOVxaYL3PYbohMkyOpU2fdhvYnG7PoWBUMIyPmU8Sac7NEG6RYa9Wck5O191htk=/kisspng-t-shirt-nike-clothing-sleeve-casul-tshirt-5ad912d1effba8.480216471524175569983.png",
+      category: "Men",
+      cost: "R359",
+      save: "R100",
+    },
+    {
+      id: 3,
+      title: "Nike T-Shirt",
+      img:
+        "https://png2.cleanpng.com/sh/95f6982d5e4ce2ee5bec674e7466853e/L0KzQYm3VME6N6R1j5H0aYP2gLBuTgQue5luiuY2bnnudX7qjP91cJpzf598bHXohra0gBF0fZ0yjOVxaYL3PYbohMkyOpU2fdhvYnG7PoWBUMIyPmU8Sac7NEG6RYa9Wck5O191htk=/kisspng-t-shirt-nike-clothing-sleeve-casul-tshirt-5ad912d1effba8.480216471524175569983.png",
+      category: "Men",
+      cost: "R359",
+      save: "R100",
+    },
+    {
+      id: 4,
+      title: "Nike T-Shirt",
+      img:
+        "https://png2.cleanpng.com/sh/95f6982d5e4ce2ee5bec674e7466853e/L0KzQYm3VME6N6R1j5H0aYP2gLBuTgQue5luiuY2bnnudX7qjP91cJpzf598bHXohra0gBF0fZ0yjOVxaYL3PYbohMkyOpU2fdhvYnG7PoWBUMIyPmU8Sac7NEG6RYa9Wck5O191htk=/kisspng-t-shirt-nike-clothing-sleeve-casul-tshirt-5ad912d1effba8.480216471524175569983.png",
+      category: "Men",
+      cost: "R359",
+      save: "R100",
+    },
+  ];
+
+  const getCard = (card, index) => {
+    var name = card.title;
+    var price = card.cost;
+    var type = card.category;
+    var product = card.img;
+    var saving = card.save;
+
+    return (
+      <div class="product-card" key={index}>
+        <div class="badge">Drobe</div>
+        <div class="product-tumb">
+          <img src={product} alt="" />
+        </div>
+        <div class="product-details">
+          <span class="product-catagory">{type}</span>
+          <h4>
+            <a href="">{name}</a>
+          </h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
+            possimus nostrum!
+          </p>
+          <div class="product-bottom-details">
+            <div class="product-price">
+              <small>{saving}</small>
+              {price}
+            </div>
+            <div class="product-links">
+              <a href="" id="icons">
+                <i class="fa fa-heart"></i>
+              </a>
+              <a href="" id="icons">
+                <i class="fa fa-shopping-cart"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
   return (
     <div className="wrapper">
       <div className="menu">
@@ -174,111 +252,11 @@ export const Shop = () => {
       </div>
       <section className="twitter">
         <div className="container">
-          <div className="items">
-            <div class="product-card">
-              <div class="badge">Drobe</div>
-              <div class="product-tumb">
-                <img
-                  src="https://png2.cleanpng.com/sh/440670fa62862568249e24af1a59dfe3/L0KzQYm3VMI1N5JufZH0aYP2gLBuTfFlcZVmi59EZXX9iX7ohPllaaQyhARyZ3nxcb36TgNpd5Yyi9DuYXvogsS0gvxia5wyedDtLYfrecXsTgN1epp1fZ8AYXTpcrPtgvVjPpNoSpCEM0e0SIG6UcE2OmU7SaQ5OUG8RoW6TwBvbz==/kisspng-adidas-yeezy-adidas-originals-shoe-sneakers-black-and-white-stripe-5adfbbfbeb6bc2.9371803115246120919643.png"
-                  alt=""
-                />
-              </div>
-              <div class="product-details">
-                <span class="product-catagory">Mens Shoe</span>
-                <h4>
-                  <a href="">Yeezy</a>
-                </h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Vero, possimus nostrum!
-                </p>
-                <div class="product-bottom-details">
-                  <div class="product-price">
-                    <small>R500.00</small>R3660.99
-                  </div>
-                  <div class="product-links">
-                    <a href="" id="icons">
-                      <i class="fa fa-heart"></i>
-                    </a>
-                    <a href="" id="icons">
-                      <i class="fa fa-shopping-cart"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="items">
-            <div class="product-card">
-              <div class="badge">Drobe</div>
-              <div class="product-tumb">
-                <img
-                  src="https://png2.cleanpng.com/sh/440670fa62862568249e24af1a59dfe3/L0KzQYm3VMI1N5JufZH0aYP2gLBuTfFlcZVmi59EZXX9iX7ohPllaaQyhARyZ3nxcb36TgNpd5Yyi9DuYXvogsS0gvxia5wyedDtLYfrecXsTgN1epp1fZ8AYXTpcrPtgvVjPpNoSpCEM0e0SIG6UcE2OmU7SaQ5OUG8RoW6TwBvbz==/kisspng-adidas-yeezy-adidas-originals-shoe-sneakers-black-and-white-stripe-5adfbbfbeb6bc2.9371803115246120919643.png"
-                  alt=""
-                />
-              </div>
-              <div class="product-details">
-                <span class="product-catagory">Mens Clothing</span>
-                <h4>
-                  <a href="">VLONE jersey</a>
-                </h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Vero, possimus nostrum!
-                </p>
-                <div class="product-bottom-details">
-                  <div class="product-price">
-                    <small>R500.00</small>R3660.99
-                  </div>
-                  <div class="product-links">
-                    <a href="" id="icons">
-                      <i class="fa fa-heart"></i>
-                    </a>
-                    <a href="" id="icons">
-                      <i class="fa fa-shopping-cart"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="items">
-            <div class="product-card">
-              <div class="badge">Drobe</div>
-              <div class="product-tumb">
-                <img
-                  src="https://png2.cleanpng.com/sh/bee05b30244d81816acbc86a80364a2f/L0KzQYm3WcI5N513j5H0aYP2gLBuTfhwd5VufZ99LYPrecP7Tf5qc5YyiAluYYTogn71iftmNaVtfeR2YT3ofLr7hb1ngl5th9HtaXWwfbb1U8l0NZNmi91udHKwRbPohcZlQWlqe6IBZkOxSIi3WcI5QWg2TaUDMUW6SYi9WcY3QF91htk=/kisspng-hoodie-t-shirt-nike-sweater-nike-therma-elite-fz-hoodie-men39s-basketb-5bae6d98ec06f3.8709289715381579769668.png"
-                  alt=""
-                />
-              </div>
-              <div class="product-details">
-                <span class="product-catagory">Mens Clothaing</span>
-                <h4>
-                  <a href="">Nike Sports Sweater</a>
-                </h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Vero, possimus nostrum!
-                </p>
-                <div class="product-bottom-details">
-                  <div class="product-price">
-                    <small>R500.00</small>R3660.99
-                  </div>
-                  <div class="product-links">
-                    <a href="" id="icons">
-                      <i class="fa fa-heart"></i>
-                    </a>
-                    <a href="" id="icons">
-                      <i class="fa fa-shopping-cart"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div className="items">{prouductDetails.map(getCard)}</div>
         </div>
       </section>
     </div>
   );
 };
+
 export default Shop;
