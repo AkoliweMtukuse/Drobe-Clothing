@@ -1,4 +1,4 @@
-export default MenTshirts = [
+export const MenTshirts = [
   {
     id: 1,
     title: "White Gucci Mane Supreme",
@@ -180,3 +180,4 @@ export default MenTshirts = [
     saving: "R 30.00",
   },
 ];
+export default MenTshirts;

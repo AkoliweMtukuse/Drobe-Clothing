@@ -1,80 +1,54 @@
 import React, { Component } from "react";
 import "../pages/Shop.scss";
+import MenTshirts from "../products/Men/MenTshirts";
 
 export const Shop = () => {
-  const prouductDetails = [
-    {
-      id: 1,
-      title: "Nike T-Shirt",
-      img:
-        "https://png2.cleanpng.com/sh/8ff311f9b28687ae2185efcffc8511e7/L0KzQYm3VMExN5Nuj5H0aYP2gLBuTgQue5luiuY2Y3zyhLnwjvcua6Nqj593ZXPuPb7olPNpbaRreeVxaXBxPbT2jb11NaRtgeR9cz24cbTqhcU0aZNne6dvOD63Qoq5WMQ5PGI6SqU8N0e3RoeAVskyNqFzf3==/kisspng-t-shirt-clothing-crew-neck-matchesfashion-com-t-shirts-5acce53abbc5f8.4292848415233774667691.png",
-      category: "Men",
-      cost: "R359",
-      save: "R100",
-    },
-    {
-      id: 2,
-      title: "Nike Goldylocks T-Shirt",
-      img:
-        "https://png2.cleanpng.com/sh/95f6982d5e4ce2ee5bec674e7466853e/L0KzQYm3VME6N6R1j5H0aYP2gLBuTgQue5luiuY2bnnudX7qjP91cJpzf598bHXohra0gBF0fZ0yjOVxaYL3PYbohMkyOpU2fdhvYnG7PoWBUMIyPmU8Sac7NEG6RYa9Wck5O191htk=/kisspng-t-shirt-nike-clothing-sleeve-casul-tshirt-5ad912d1effba8.480216471524175569983.png",
-      category: "Men",
-      cost: "R359",
-      save: "R100",
-    },
-    {
-      id: 3,
-      title: "Nike T-Shirt",
-      img:
-        "https://png2.cleanpng.com/sh/95f6982d5e4ce2ee5bec674e7466853e/L0KzQYm3VME6N6R1j5H0aYP2gLBuTgQue5luiuY2bnnudX7qjP91cJpzf598bHXohra0gBF0fZ0yjOVxaYL3PYbohMkyOpU2fdhvYnG7PoWBUMIyPmU8Sac7NEG6RYa9Wck5O191htk=/kisspng-t-shirt-nike-clothing-sleeve-casul-tshirt-5ad912d1effba8.480216471524175569983.png",
-      category: "Men",
-      cost: "R359",
-      save: "R100",
-    },
-    {
-      id: 4,
-      title: "Nike T-Shirt",
-      img:
-        "https://png2.cleanpng.com/sh/95f6982d5e4ce2ee5bec674e7466853e/L0KzQYm3VME6N6R1j5H0aYP2gLBuTgQue5luiuY2bnnudX7qjP91cJpzf598bHXohra0gBF0fZ0yjOVxaYL3PYbohMkyOpU2fdhvYnG7PoWBUMIyPmU8Sac7NEG6RYa9Wck5O191htk=/kisspng-t-shirt-nike-clothing-sleeve-casul-tshirt-5ad912d1effba8.480216471524175569983.png",
-      category: "Men",
-      cost: "R359",
-      save: "R100",
-    },
-  ];
+  console.log(MenTshirts.find((i) => i.id == 1));
+  const prouductDetails = MenTshirts;
+  var id = MenTshirts.find((i) => i.id);
+  var title = MenTshirts.find((i) => i.title);
+  var cost = MenTshirts.find((i) => i.cost);
+  var saving = MenTshirts.find((i) => i.saving);
+  var src = MenTshirts.find((i) => i.src);
+  var type = MenTshirts.find((i) => i.type);
 
-  const getCard = (card, index) => {
+  const getCard = (card) => {
+    // MenTshirts
+    var idNum = card.id;
     var name = card.title;
     var price = card.cost;
-    var type = card.category;
-    var product = card.img;
-    var saving = card.save;
-
+    var saved = card.saving;
+    var image = card.src;
+    var gender = card.type;
     return (
-      <div class="product-card" key={index}>
-        <div class="badge">Drobe</div>
-        <div class="product-tumb">
-          <img src={product} alt="" />
-        </div>
-        <div class="product-details">
-          <span class="product-catagory">{type}</span>
-          <h4>
-            <a href="">{name}</a>
-          </h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
-            possimus nostrum!
-          </p>
-          <div class="product-bottom-details">
-            <div class="product-price">
-              <small>{saving}</small>
-              {price}
-            </div>
-            <div class="product-links">
-              <a href="" id="icons">
-                <i class="fa fa-heart"></i>
-              </a>
-              <a href="" id="icons">
-                <i class="fa fa-shopping-cart"></i>
-              </a>
+      <div className="items">
+        <div class="product-card" key={idNum}>
+          <div class="badge">Drobe</div>
+          <div class="product-tumb">
+            <img src={image} alt="" />
+          </div>
+          <div class="product-details">
+            <span class="product-catagory">{gender}</span>
+            <h4>
+              <a href="">{name}</a>
+            </h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
+              possimus nostrum!
+            </p>
+            <div class="product-bottom-details">
+              <div class="product-price">
+                <small>{saved}</small>
+                {price}
+              </div>
+              <div class="product-links">
+                <a href="" id="icons">
+                  <i class="fa fa-heart"></i>
+                </a>
+                <a href="" id="icons">
+                  <i class="fa fa-shopping-cart"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -136,8 +110,8 @@ export const Shop = () => {
                   value="codepen"
                 />
                 <i class="fa fa-male" aria-hidden="true"></i>
-                <span class="label">Men's Clothing</span>
-                <span class="opt-val">Men's Clothing</span>
+                <span class="label">Men's T-Shirt</span>
+                <span class="opt-val">Men's T-Shirt</span>
               </div>
               <div class="option">
                 <input
@@ -153,8 +127,8 @@ export const Shop = () => {
                   value="dribbble"
                 />
                 <i class="fa fa-female" aria-hidden="true"></i>
-                <span class="label">Women's Clothing</span>
-                <span class="opt-val">Women's Clothing</span>
+                <span class="label">Men's Pants </span>
+                <span class="opt-val">Men's Pants </span>
               </div>
               <div class="option">
                 <input
@@ -170,8 +144,8 @@ export const Shop = () => {
                   value="behance"
                 />
                 <i class="fa fa-child" aria-hidden="true"></i>
-                <span class="label">Kid's Clothing</span>
-                <span class="opt-val">Kid's Clothing</span>
+                <span class="label">Men's Shoes</span>
+                <span class="opt-val">Men's Shoes</span>
               </div>
               <div class="option">
                 <input
@@ -187,8 +161,8 @@ export const Shop = () => {
                   value="hackerrank"
                 />
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
-                <span class="label">Baby's Clothing</span>
-                <span class="opt-val">Baby's Clothing</span>
+                <span class="label">Women's T-Shirt</span>
+                <span class="opt-val">Women's T-Shirt</span>
               </div>
               <div class="option">
                 <input
@@ -204,8 +178,8 @@ export const Shop = () => {
                   value="stackoverflow"
                 />
                 <i class="fa fa-diamond" aria-hidden="true"></i>
-                <span class="label">Accessories</span>
-                <span class="opt-val">Accessories</span>
+                <span class="label">Women's Pants</span>
+                <span class="opt-val">Women's Pants</span>
               </div>
               <div class="option">
                 <input
@@ -221,8 +195,8 @@ export const Shop = () => {
                   value="freecodecamp"
                 />
                 <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                <span class="label">Drobe</span>
-                <span class="opt-val">Drobe</span>
+                <span class="label">Women's Sneakers</span>
+                <span class="opt-val">Women's Sneakers</span>
               </div>
               <div id="option-bg"></div>
             </div>
